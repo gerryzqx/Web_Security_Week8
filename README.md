@@ -17,9 +17,20 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 
 ## Blue
 
-Vulnerability #1: ********\_\_********
+Vulnerability #1: SQL Injection
+- GIF Walkthrough:
+  -
+  - Steps taken:
+  1. Using sqlmap it gives us the vulnerability
+  ```
+  ' AND SLEEP(5)=0--'
+  ```
+  2. Insert this into the url
+  3. The server will execute the SQLI and sleep for 5 seconds.
 
-Vulnerability #2: ********\_\_********
+Vulnerability #2: Session Hijacking
+- GIF Walkthrough:
+  
 
 ## Green
 
