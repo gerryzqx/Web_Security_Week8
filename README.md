@@ -19,7 +19,7 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 
 Vulnerability #1: SQL Injection
 - GIF Walkthrough:
-  - ![](SQLI.gif)
+  ![](SQLI.gif)
   - The SQLI vulnerability is by adding ``` ' OR SLEEP(5)=0--' ``` to the end of the URL which will cause the webpage to take 5 seconds to query the data.
   - Steps taken:
   1. Using sqlmap it gives us the vulnerability
@@ -31,6 +31,14 @@ Vulnerability #1: SQL Injection
 
 Vulnerability #2: Session Hijacking
 - GIF Walkthrough:
+  ![](Session_Hijacking.gif)
+  - Steps taken:
+  1. Log into the Blue page with Chrome or any brower with the URL ``` https://35.184.88.145/blue/public/staff/login.php ```
+  2. Go to ``` https://35.184.88.145/blue/public/hacktools/change_session_id.php ``` to obtain the session id.
+  3. Open another browser, and access ``` https://35.184.88.145/blue/public/hacktools/change_session_id.php ```.
+  4. Copy the session id obtained in step 2 and paste it into the blue page session id and change it.
+  5. In the blue page, click login and you should be automatically logged in without entering any user credentials.
+
   
 
 ## Green
