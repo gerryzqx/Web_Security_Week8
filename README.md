@@ -1,6 +1,6 @@
 # Project 8 - Pentesting Live Targets
 
-Time spent: **X** hours spent in total
+Time spent: **6** hours spent in total
 
 > Objective: Identify vulnerabilities in three different versions of the Globitek website: blue, green, and red.
 
@@ -69,11 +69,16 @@ Vulnerability #2: Cross-Site Scripting
 
 Vulnerability #1: Insecure Direct Object Reference (IDOR)
   - GIF Walkthrough:
-  ![]
+  ![](IDOR.gif)
     - The vulnerability here is that any attacker can access information that is not usually available to the public by 
       changing the ``` id ``` parameter.
     - Steps takens:
-    1. 
+    1. Click on Find a salesperson section in the Red page.
+    2. Then click on anyone in there, and in the URL section start changing the id to like 5, where it will display
+       the salesperson info.
+    3. Then change id in the URL to 10 and you should see ``` Testy McTesterson (NOT PUBLIC UNTIL SEPT. 1) ``` 
+    4. Go back to the salesperson section and try to find the person ``` Testy McTesterson ``` you won't be able to see 
+       Testy there.
 
 Vulnerability #2: Cross-Site Request Forgery (CSRF)
 
