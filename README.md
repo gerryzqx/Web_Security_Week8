@@ -81,7 +81,17 @@ Vulnerability #1: Insecure Direct Object Reference (IDOR)
        Testy there.
 
 Vulnerability #2: Cross-Site Request Forgery (CSRF)
+  - GIF Walkthrough:
+  ![](CSRF.gif)
+    - The vulnerability here is an CSRF exploit that takes the url of the link manually and change the content within the file. This attack is executed through the opening of an html file that will run a script that changes the uers in a system.
+    - Steps taken:
+    1. Download my Cross_Site_Request_Forgery.html which contains the attack that will change the content of a user.
+    2. Go to ``` Users ``` in the login tab of the Red page.
+    3. Look for the person with user id 1 and look at their name.
+    4. Run the Cross_Site_Request_Forgery.html file by double clicking on it, it should run in the browser.
+    5. Now, go back to the login tab and click ``` Users ```, you should see the user with id 1 has been changed to a new user.
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+Describe any challenges encountered while doing the work:
+- No challenges encountered while doing the work.
