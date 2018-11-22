@@ -32,6 +32,7 @@ Vulnerability #1: SQL Injection
 Vulnerability #2: Session Hijacking
 - GIF Walkthrough:
   ![](Session_Hijacking.gif)
+  - This vulnerability allows any user to change their session id and log in without entering their user credentials.
   - Steps taken:
   1. Log into the Blue page with Chrome or any brower with the URL ``` https://35.184.88.145/blue/public/staff/login.php ```
   2. Go to ``` https://35.184.88.145/blue/public/hacktools/change_session_id.php ``` to obtain the session id.
@@ -43,15 +44,38 @@ Vulnerability #2: Session Hijacking
 
 ## Green
 
-Vulnerability #1: ********\_\_********
+Vulnerability #1: User Enumeration
+  - GIF Walkthrough:
+  ![](Username_Enumeration.gif)
+  - The vulnerability here is that if a user login with a username that exist, the error message will be bold. 
+    If the user login with a username that doesn't exist, the error message will not be in bold.
+  - Steps taken:
+  1. Click login on the green page and type ``` pperson ``` as the username and the password can be anything.
+  2. You should see the message ``` Log in was unsuccessful ``` is in bold.
+  3. Now, type any username like ``` Tommy ``` and the password can be anything.
+  4. You should see the message ``` Log in was unsuccessful ``` is not in bold.
 
-Vulnerability #2: ********\_\_********
+Vulnerability #2: Cross-Site Scripting
+  - GIF Walkthrough:
+  ![](Cross_Site_Scripting.gif)
+  - The vulnerability here is a XSS exploit that uses a simple Javascript injection on the feedback input in the Contact page.
+    The script will display an alert when submitting the feedback.
+  - Steps taken:
+  1. Click on the Contact section in the Green page.
+  2. Enter in your name, email and the script ``` <script>alert('Mallory found the XSS!');</script> ``` in the feedback textbox.
+  3. Submit the feedback, then click login and click on feedback and it will display the alert message.
 
 ## Red
 
-Vulnerability #1: ********\_\_********
+Vulnerability #1: Insecure Direct Object Reference (IDOR)
+  - GIF Walkthrough:
+  ![]
+    - The vulnerability here is that any attacker can access information that is not usually available to the public by 
+      changing the ``` id ``` parameter.
+    - Steps takens:
+    1. 
 
-Vulnerability #2: ********\_\_********
+Vulnerability #2: Cross-Site Request Forgery (CSRF)
 
 ## Notes
 
