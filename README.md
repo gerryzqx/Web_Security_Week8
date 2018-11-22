@@ -19,11 +19,12 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 
 Vulnerability #1: SQL Injection
 - GIF Walkthrough:
-  -
+  - ![](SQLI.gif)
+  - The SQLI vulnerability is by adding ``` ' OR SLEEP(5)=0--' ``` to the end of the URL which will cause the webpage to take 5 seconds to query the data.
   - Steps taken:
   1. Using sqlmap it gives us the vulnerability
   ```
-  ' AND SLEEP(5)=0--'
+  ' OR SLEEP(5)=0--'
   ```
   2. Insert this into the url
   3. The server will execute the SQLI and sleep for 5 seconds.
